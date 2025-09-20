@@ -7,7 +7,7 @@ Foundry toolchain installed (forge, anvil)
 Git installed
 
 
-Project Structure
+Project Structure:
 
 forge-poc-templates/
 ├── foundry.toml
