@@ -33,6 +33,7 @@ Setup:
   cd Multicall-PoC
 
 2.Install dependencies
+
  forge install forge-std
 
  ___________________________________________
