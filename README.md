@@ -63,8 +63,8 @@ _______________________________________________
   2.In a new terminal, run the exploit script:
    forge script script/RunExploit.s.sol --tc RunExploit --fork-url http://127.0.0.1:8545
 
-# the anvil what we started is Listening on 127.0.0.1:8545
-# so in forge test for script/RunExploit.s.sol we ised fork url as 127.0.0.1:8545
+// the anvil what we started is Listening on 127.0.0.1:8545
+// so in forge test for script/RunExploit.s.sol we used fork url as 127.0.0.1:8545
 
 Expected output:
 
