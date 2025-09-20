@@ -1,9 +1,9 @@
-Overview
+Overview:
+
 This project demonstrates a msg.value reuse vulnerability in a Multicall implementation. By batching two deposit() calls in one multicall transaction with only 1 ETH, an attacker’s internal balance is credited with 2 ETH. The PoC includes both a unit test and a script to reproduce the exploit on a local fork.
 
 Prerequisites:
 Foundry toolchain installed (forge, anvil)
-
 Git installed
 
 
@@ -27,18 +27,19 @@ forge-poc-templates/
 Setup:
 
 1.Clone this repo
-  git clone <your-repo-url>
-cd <repo-directory>
-
+  git clone https://github.com/rachelvictory9773/Multicall-PoC.git
+  cd Multicall-PoC
 
 2.Install dependencies
  forge install forge-std
 
+ ___________________________________________
 
-Running the PoC
+Running the PoC:
 
-1. Unit Test PoC
-   Runs a Foundry unit test demonstrating the exploit assertions.
+1. Unit Test PoC:
+   
+Runs a Foundry unit test demonstrating the exploit assertions.
 
 forge test --match-path test/MulticallExploit1.t.sol -vv
 
@@ -52,14 +53,16 @@ Ran 1 test for test/MulticallExploit1.t.sol:MulticallExploitTest
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 21.94ms (4.75ms CPU time)
 
 Ran 1 test suite in 195.86ms (21.94ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
-
-2. Script PoC
+_______________________________________________
+2. Script PoC:
+   
  Runs a Forge script on a local Anvil fork, printing console logs of each step.
 
   1.Start a local fork with Anvil:
     anvil
   2.In a new terminal, run the exploit script:
    forge script script/RunExploit.s.sol --tc RunExploit --fork-url http://127.0.0.1:8545
+
 # the anvil what we started is Listening on 127.0.0.1:8545
 # so in forge test for script/RunExploit.s.sol we ised fork url as 127.0.0.1:8545
 
