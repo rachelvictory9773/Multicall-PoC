@@ -59,8 +59,11 @@ _______________________________________________
  Runs a Forge script on a local Anvil fork, printing console logs of each step.
 
   1.Start a local fork with Anvil:
-    anvil
+  
+   anvil
+    
   2.In a new terminal, run the exploit script:
+  
    forge script script/RunExploit.s.sol --tc RunExploit --fork-url http://127.0.0.1:8545
 
 // the anvil what we started is Listening on 127.0.0.1:8545
